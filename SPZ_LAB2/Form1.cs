@@ -149,6 +149,9 @@ namespace SPZ_LAB2
                 Class.University university = (Class.University)universities[universities.Count - 1].Clone();
                 universities.Add(university);
             }
+            else MessageBox.Show("Нет ни одного университета, чтобы сделать копию!", "Ошибка",
+                       MessageBoxButtons.OK);
+
         }
 
         private void button_display_Click(object sender, EventArgs e)
