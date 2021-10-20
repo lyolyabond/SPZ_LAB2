@@ -11,7 +11,7 @@ namespace SPZ_LAB2
         public static decimal Adding_canteen(this decimal income, ref int number_of_staff, 
             decimal payment_for_accommodation, int number_of_students)
         {
-            if(payment_for_accommodation == 0)
+            if(income == 0)
             { 
             income = payment_for_accommodation * number_of_students;
             } 
