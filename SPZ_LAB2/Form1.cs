@@ -127,10 +127,14 @@ namespace SPZ_LAB2
 
         private void button_eviction_Click(object sender, EventArgs e)
         {
-            if (universities.Count > 0)
+
+            if (universities.Count > 0 && numericUpDown_eviction.Value < universities[universities.Count - 1].Number_of_students)
             {
                 universities[universities.Count - 1].Eviction(decimal.ToInt32(numericUpDown_eviction.Value));      
             }
+            else MessageBox.Show("Причина ошибки может быть:\n1)Нет ни одного университета, чтобы выселить студентов," +
+                "\n2)Количество студентов для выселения превышает количество существующих студентов!", "Ошибка",
+                 MessageBoxButtons.OK);
             numericUpDown_eviction.Value = numericUpDown_eviction.Minimum;
         }
 
